@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace FirstAssignment
+namespace ToolGameProgram
 {
     class Program
     {
@@ -15,8 +15,11 @@ namespace FirstAssignment
                 Console.BackgroundColor = ConsoleColor.DarkBlue;
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Please choose your program:\n1) Calculate Income\n" +
-                    "2) Student GPA Check\n3) Multiply Values\n4)" +
-                    " Divide Two numbers\n5) Compare Two numbers\n6) Even or Odd\n7) Game Menu\n8) Cubic root game\n9) Display Multiplication Table\n10) Average some numbers\n11) Is it alphabatized\n12) Exit\n");
+                    "2) Student GPA Check\n3) Multiply Values\n" +
+                    "4) Divide Two numbers\n5) Compare Two numbers\n" +
+                    "6) Even or Odd\n7) Game Menu\n8) Cubic root game\n" +
+                    "9) Display Multiplication Table\n10) Average some numbers\n" +
+                    "11) Is it alphabatized\n12) Exit\n");
 
                 int option = int.Parse(Console.ReadLine());
                 Calculator calc = new Calculator();
@@ -51,14 +54,19 @@ namespace FirstAssignment
                         comp.evenOdd();
                         break;
 
-                    case 7:                             // THROW ALL THIS SHIT INTO NEW CLASS "EXTRA STUFF"
+                    case 7:
                         bool submenu = true;
                         do
                         {
                             Console.Clear();
-                            Console.WriteLine("Choose an option:\n1) Guess the number\n2) It it prime?\n3) Factorial Game\n4) Season Guessing\n5) Rock, Paper, Scissors\n6) Go Back");
-                            int option2 = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Choose an option:\n1) Guess the number\n" +
+                                            "2) It it prime?\n" + 
+                                            "3) Factorial Game\n" + 
+                                            "4) Season Guessing\n" + 
+                                            "5) Rock, Paper, Scissors\n" +
+                                            "6) Go Back");
 
+                            int option2 = int.Parse(Console.ReadLine());
                             switch (option2)
                             {
 
@@ -97,7 +105,6 @@ namespace FirstAssignment
 
 
                     // Is it a prime number? (say a number, computer outputs if prime number)
-                    // one last exercise after this
                     case 8:
                         calc.cubeNumber();
                         break;
@@ -125,26 +132,7 @@ namespace FirstAssignment
                         Console.WriteLine("The program you've selected doesn't exist.");
                         break;
                 }
-
             } while (flag);
         }
-
-//         Console.WriteLine("Welcome to our art project!\nPlease enter an odd number: ");
-//        int num1 = Int32.Parse(Console.ReadLine());
-//        string lineSpace = " ";
-
-
-//for (int i = 0; i <= num1; i++)
-//{
-//    lineSpace += " ";
-//    for (int i = 0; i <= num1; i++)
-//    {
-//        Console.Write("*");
-//    }
-//    Console.WriteLine("");
-//    Console.Write(lineSpace);
-//    num1 = num1 - 2;
-//}
-//Console.ReadKey();
     }
 }

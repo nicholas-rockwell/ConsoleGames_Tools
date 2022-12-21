@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstAssignment
+namespace ToolGameProgram
 {
     class Teacher
     {
@@ -56,6 +56,5 @@ namespace FirstAssignment
             Console.WriteLine("\nPress any key to continue");
             Console.ReadKey();
         }
-            
     }
 }
